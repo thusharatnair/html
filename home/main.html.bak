@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+   float:left;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+		 box-sizing: content-box;
+}
+
+li a {
+    display: block;
+    color: gray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a h3:hover, .dropdown:hover .dropbtn {
+   /* background-color: #bbbbbb;*/
+   /*text-decoration: underline;*/
+
+   color:black;
+}
+
+h3 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4E4D4A;
+    margin-bottom: 20px;
+	color: gray;
+    text-align: center;
+	text-decoration:none;
+}
+
+div#chartContainer
+{
+margin-top:6%;
+}
+#img
+{
+margin-left:10%;
+}
+</style>
+   
+ <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+    
+      title:{
+      text: "Temperature chart"
+      },
+	   
+       data: [
+      {        
+        type: "spline",
+        
+        dataPoints: [
+        { x: new Date(2015, 00, 1), y: 87.84},
+        { x: new Date(2015, 01, 1), y: 83.26 },
+        { x: new Date(2015, 02, 1), y: 89.66 },
+        { x: new Date(2015, 03, 1), y: 56.32 },
+        { x: new Date(2015, 04, 1), y: 89.59 },
+        { x: new Date(2015, 05, 1), y: 81.23},
+        { x: new Date(2015, 06, 1), y: 43.96 },
+        { x: new Date(2015, 07, 1), y: 86.77 },
+        { x: new Date(2015, 08, 1), y: 82.26 },
+        { x: new Date(2015, 09, 1), y: 88.88 },
+        { x: new Date(2015, 10, 1), y: 36.80 },
+        { x: new Date(2015, 11, 1), y: 80.29 }        
+        ]
+      }       
+        
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvasjs.min.js"></script></head>
+ <body>
+ <div id="menu">
+<ul>
+<li><a class="active"  href="main.html"><h3>Main</h3></a></li>
+<ul><li><a href="Daily.html"><h3>Daily</h3></a></li>
+<li><a href="#"><h3>This day in history</h3></a></li>
+<li><a href="Satellite.html"><h3>Satellite</h3></a></li>
+</ul>
+<hr style="margin-top:0">
+</div>
+<h2>Next Hours</h2>
+   <div id="chartContainer" style="height: 300px; width: 80%;">
+  </div>
+  <h2>Next Days</h2>
+   <div id="img">
+ <img src="foot.png"/>
+ <img src="data.png"/>
+ </div>
+ </body>
+</html>
